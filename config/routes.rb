@@ -1,9 +1,19 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :users, only: [:show, :create, :new] do
-    resources :instruments, only: [:index, :show, :new, :create] do
-      resources :rental_requests, only: [:create, :accept, :decline]
+
+  resources :instruments, only: [:index, :show] do
+    resources :rental_requests, only: [:create]
+  end
+
+  resource :profile, only: [:show]
+  namespace :owner do
+    resources :instruments, only: [:new, :create]
+    resources :rental_requests, only: [] do
+      member do
+        patch :accept
+        patch :decline
+      end
     end
   end
 end
