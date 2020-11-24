@@ -1,0 +1,16 @@
+<div class="index-action">
+  <div class="container">
+    <h1>Instruments près de chez toi</h1>
+
+    <% @instruments.each do |instrument| %>
+      <div class="card-instrument-inline m-3">
+        <%= cl_image_tag instrument.photo.key, width: 350, height: 200, crop: :fill %>
+        <div class="card-instrument-inline-infos p-7">
+          <h2> <%= instrument.name %> </h2>
+          <p> <span class="text-instrument-inline"> <%= instrument.description %> </span></p>
+          <p class="btn btn-primary"> <%= instrument.price_per_day %> €/ jour </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
