@@ -9,4 +9,5 @@ class User < ApplicationRecord
   has_many :reservations, through: :instruments, source: :rental_requests
   # En tant que renter
   has_many :rental_requests, foreign_key: :renter_id
+  has_one_attached :avatar
 end
