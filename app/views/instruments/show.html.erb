@@ -27,7 +27,7 @@
       <%= simple_form_for [@instrument, @rental_request] do |f| %>
         <%= f.input :start_date %>
         <%= f.input :end_date %>
-        <%= f.button :submit, "louer pour #{@instrument.price_per_day}€/jour", class: "btn btn-primary"%>
+        <%= f.button :submit, "louer pour #{@instrument.price_per_day}€/jour", class: "btn btn-primary btn-create-rental-request"%>
       <% end %>
     </div>
   </div>
