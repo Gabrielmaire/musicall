@@ -5,7 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-puts "created users"
+puts "destroy all"
+
+RentalRequest.destroy_all
+User.destroy_all
+Instrument.destroy_all
 
 marc = User.new(username: "Marc",  email:"marc.neusch@icloud.com", password:"cerise")
 file = File.open(Rails.root.join('db/seeds/images/users/marc.png'))
