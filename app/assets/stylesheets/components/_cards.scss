@@ -42,3 +42,19 @@
 .btn btn-primary {
   text-align: right;
 }
+
+#map {
+  height: 100vh;
+  width: 100%;
+  position: sticky;
+  top: 0;
+
+}
+
+.container {
+  display: flex;
+}
+
+.map-card-instruments {
+  flex-grow: 1;
+}
