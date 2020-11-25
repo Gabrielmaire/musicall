@@ -1,7 +1,7 @@
 <div class="index-action">
   <div>
     <h1>Instruments près de chez toi</h1>
-    <div class="container">
+    <div class="map-container">
 
       <div>
         <% @instruments.each do |instrument| %>
@@ -11,9 +11,9 @@
               <h2> <%= instrument.name %> </h2>
               <p> <span class="text-instrument-inline"> <%= instrument.description %> </span></p>
 
-              <p class="btn btn-primary"> 
-                <%= link_to instrument_path(instrument) do %> 
-                  <%= instrument.price_per_day %> €/ jour 
+              <p class="btn btn-primary">
+                <%= link_to instrument_path(instrument) do %>
+                  <%= instrument.price_per_day %> €/ jour
                 <% end %>
               </p>
             </div>
