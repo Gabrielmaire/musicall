@@ -1,0 +1,56 @@
+.profil {
+
+  h1 {
+
+  }
+
+  .card-product {
+    overflow: hidden;
+    height: 120px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .card-product img {
+    height: 100%;
+    width: 150px;
+    object-fit: cover;
+    text-align: left;
+  }
+
+  .card-product h2 {
+    font-size: 16px;
+    font-weight: bold;
+
+  }
+
+  .card-product p {
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-top: 8px;
+    text-align: right;
+  }
+
+  .card-product .card-product-infos {
+    padding: 30px;
+  }
+
+  .btn-flat {
+  margin-bottom: 5px;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: $salmon;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #ff8e71;
+  color: white;
+}
+
+}
