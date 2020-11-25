@@ -11,6 +11,8 @@ RentalRequest.destroy_all
 User.destroy_all
 Instrument.destroy_all
 
+puts "created users"
+
 marc = User.new(username: "Marc",  email:"marc.neusch@icloud.com", password:"cerise")
 file = File.open(Rails.root.join('db/seeds/images/users/marc.png'))
 marc.avatar.attach(io: file, filename: 'marc.png', content_type: 'image/png')
