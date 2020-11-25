@@ -4,7 +4,7 @@
   <div class="container">
     <h1>Music'All!</h1>
     <p>Louez des instruments à deux pas de chez vous !</p>
-    <a class="btn btn-flat" href="#">Explorez les instruments</a>
+    <%= link_to 'Explorez les instruments', instruments_path, class: "btn btn-flat" %>
   </div>
 </div>
 
@@ -15,7 +15,7 @@
       <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= rails_blob_path(instrument.photo) %>)">
       </div>
       <div class="card-infos">
-        <p><%= instrument.name %><br>
+        <p><%= instrument.name %></br>
         <%= instrument.location %></p>
       </div>
     </div>
