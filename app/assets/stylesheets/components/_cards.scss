@@ -1,24 +1,37 @@
 .index-action h1 {
-  margin: 0 16%;
+  // margin: 0 16%;
+  font-size: 50px;
+  margin: 0 10%;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  // color: white;
+  font-family: 'Sansita Swashed', cursive;
 }
 
-.banner-index {
-  margin: 0 auto;
-  height: 200px;
-  width: 100%;
-  margin-bottom: 20px;
-  object-fit: fill;
-}
+// .banner-index {
+//   margin: 0 auto;
+//   height: 250px;
+//   width: 100%;
+//   margin-bottom: 20px;
+//   object-fit: fill;
+//   background-repeat: no-repeat;
+//   background-position: center;
+// }
 
 .card-instrument-inline {
   overflow: hidden;
-  width: 500px;
+  width: 700px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   border-radius: 5px;
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
+
+.card-instrument-avatar {
+  display: flex;
+  justify-content: space-between;
 }
 
 .card-instrument-inline img {
@@ -28,7 +41,7 @@
 }
 
 .card-instrument-inline h2 {
-  font-size: 16px;
+  font-size: 19px;
   font-weight: bold;
 }
 
@@ -45,6 +58,8 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  font-size: 15px;
+  // line-height: 20px;
 }
 
 #map {
@@ -57,7 +72,7 @@
 
 .map-container{
   display: flex;
-  margin: 0 14%;
+  margin: 0 8%;
 }
 
 .map-card-instruments {

@@ -1,8 +1,10 @@
 <div class="index-action">
   <div class="instruments-index-title mt-4">
-    <div class="banner-index" style="background-image: url(https://res.cloudinary.com/dehuad3aa/image/upload/v1606399524/photo-1519508234439-4f23643125c1_kfject.jpg); mr-10 ml-10">
-      <h1><em>Instruments </em><i class='fas fa-music' style='font-size:12px'></i>
-      <i class='fas fa-music' style='font-size:22px'></i></h1>
+    <%# <div class="banner-index" style="background-image: url(https://res.cloudinary.com/dehuad3aa/image/upload/v1606402503/photo-1549401002-bcd2dba1a5c2_evhete.jpg); mr-10 ml-10"> %>
+      <h1>Instruments  <i class='fas fa-music' style='font-size:55px; color: #e76f51'></i>
+      <%# <i class="fas fa-guitar"></i> %>
+      <%# <i class="fas fa-drum"></i> %>
+
       <br>
     </div>
   </div>
@@ -10,15 +12,18 @@
 
       <div>
         <% @instruments.each do |instrument| %>
-          <div class="card-instrument-inline m-3">
-            <%= cl_image_tag instrument.photo.key, width: 350, height: 300, crop: :fill %>
+          <div class="card-instrument-inline m-4">
+            <%= cl_image_tag instrument.photo.key, width: 350, height: 310, crop: :fill %>
             <div class="card-instrument-inline-infos p-3">
-              <h2> <em><%= instrument.name %></em> </h2>
+              <h2> <%= instrument.name %> </h2>
               <h6> <span class="text-instrument-inline"> <%= instrument.description %> </span></h6>
-              <div class="d-flex justify-content-end mt-3">
-                <%= link_to instrument_path(instrument), class: "btn btn-primary" do %>
+              <div class="card-instrument-avatar d-flex align-items-end">
+                <%= cl_image_tag instrument.owner.avatar.key, style: "border-radius: 50%; width:40px; height:40px;"%>
+                <div class="d-flex justify-content-end mt-3">
+                  <%= link_to instrument_path(instrument), class: "btn btn-primary" do %>
                   <%= instrument.price_per_day %> €/ jour
                 <% end %>
+                </div>
               </div>
             </div>
           </div>
