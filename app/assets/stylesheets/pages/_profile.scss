@@ -1,8 +1,7 @@
 .profil {
 
- .fa-check-circle {
-  color: green,
- }
+  margin: 20px;
+
 
   .card-product {
     overflow: hidden;
@@ -47,6 +46,7 @@
   border-radius: 4px;
   background: $salmon;
   transition: background 0.3s ease;
+  text-align: center;
 }
 
 .btn-flat:hover {
@@ -57,24 +57,25 @@
 .instrument-container {
   width: 150px;
   height: 150px;
-  border: groove;
+  border: thin;
   text-align: center;
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-right: 6px;
+  margin-right: 9px;
   border-radius: 7px;
 
 
   p {
   color : $white;
-  font-weight: 800;
+  font-weight: 700;
+  margin-top: 30px;
   }
 
   .price {
-    font-weight: 1000;
+    font-weight: 1200;
   }
 
 }
