@@ -38,3 +38,10 @@ import { initMapbox } from '../plugins/init_mapbox';
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
 })
+
+import { totalPrice } from '../components/total_price_calculations';
+totalPrice();
+
+import "../plugins/flatpickr"
+
+import "../plugins/moment"
