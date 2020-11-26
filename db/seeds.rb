@@ -94,6 +94,7 @@ marc_trompette = Instrument.new(category: "Instrument à vent",
                                 name: "Trompette JTR500Q",
                                 price_per_day: 4,
                                 location:  "6 Place de la Bourse, 44000 Nantes",
+                                city: "Nantes",
                                 description: "La branche d’embouchure et la coulisse d’accord en cuivre rose ainsi que les tubes extérieurs en maillechort font de la trompette JTR500Q un instrument fiable et robuste.
                                 La coulisse d’accord garantit une émission facile et une bonne intonation.",
                                 owner: marc,
@@ -106,7 +107,8 @@ marc_trompette.save!
 gab_violoncelle = Instrument.new(category: "Instrument à cordes",
                                 name: "Violoncelle GEWA",
                                 price_per_day: 3,
-                                location:  " 2 Rue Piet, 85330 Noirmoutier-en-l'Île",
+                                location:  "6 Avenue Léon Blum, 44400 Rezé",
+                                city: "Rezé",
                                 description: "Instrument de belle facture, de finition soignée un joli son et un bon confort de jeu.
                                 Après un petit réglage en atelier de lutherie, quatre mois d'utilisation et un concert, je suis très satisfait de cet achat.",
                                 owner: gab,
@@ -121,6 +123,7 @@ marc_violon = Instrument.new(category: "Instrument à cordes",
                                 name: "Pack violon Stentor 1/2",
                                 price_per_day: 3,
                                 location:  "2 Rue Gaëtan Rondeau, 44201 Nantes",
+                                city: "Nantes",
                                 description: "Le Violon Stentor Student II est un instrument fabriqué à la main de très grande qualité, conçu pour les étudiants qui veulent un instrument avec une grande qualité sonore constante sur lequel apprendre sans se ruiner.",
                                 owner: marc,
                                 )
@@ -132,6 +135,7 @@ steph_batterie = Instrument.new(category: "Percussion",
                                 name: "ROLAND TD-1K",
                                 price_per_day: 9,
                                 location:  "4 Rue Jeanne d'Arc, 44000 Nantes",
+                                city: "Nantes",
                                 description: "La batterie électronique est un instrument électronique qui dérive de la batterie : les fûts et cymbales sont remplacés par des pads en mousse ou caoutchouc ou encore en fausse peau (peau résille ou mesh) équipés de capteurs électriques qui permettent le déclenchement d'un son. Sun Music est revendeur des marques Roland, Yamaha, Alesis, 2Box pour Toulon, le Var et la France.",
                                 owner: steph
                                 )
@@ -144,6 +148,7 @@ steph_flute = Instrument.new(category: "Instrument à vent",
                                 name: "Yamaha YFL 282 ID2",
                                 price_per_day: 15,
                                 location:  "3 Rue de l'Hippodrome, 44300 Nantes",
+                                city: "Nantes",
                                 description: "La Flûte traversière Yamaha YFL282 id remplace la YFL281 id. C'est bien plus qu'une simple version d'étude des modèles professionels de la marque. Bénéficiant de la même conception et du même savoir faire de haut niveau que les modèles des Séries 300 et 400, les flûtes de la Série 200 sont en maillechort avec une élégante finition argentée.",
                                 owner: steph
                                 )
@@ -156,6 +161,7 @@ ophe_clarinette = Instrument.new(category: "Instrument à vent",
                                 name: "Clarinette Leblanc",
                                 price_per_day: 3,
                                 location:  "4 rue Dessaix 44000 Nantes",
+                                city: "Nantes",
                                 description: "Grand instrument composé de matériaux solides et durables, cette superbe clarinette est agréable au toucher et forme une bonne connexion avec le joueur.",
                                 owner: ophe
                                 )
@@ -168,6 +174,7 @@ ophe_guitare = Instrument.new(category: "Instrument à cordes",
                                 name: "Guitare junior",
                                 price_per_day: 2,
                                 location:  "1 rue du Gué Robert 44000 Nantes",
+                                city: "Nantes",
                                 description: "Conçue pour les jeunes débutants, la guitare classique Junior offre un instrument de grande qualité. Avec un corps de taille junior, des cordes en nylon et une gamme de couleurs vives, c'est la guitare parfaite pour l'enfant désirant s'essayer à la musique.",
                                 owner: ophe
                                 )
@@ -179,6 +186,7 @@ marc_synthetiseur = Instrument.new(category: "Clavier",
                                 name: "Synthétiseur Yamaha",
                                 price_per_day: 5,
                                 location:  "1 rue Saint-Vincent 44000 Nantes",
+                                city: "Nantes",
                                 description: "Conçue pour les jeunes débutants, la guitare classique Junior offre un instrument de grande qualité. Avec un corps de taille junior, des cordes en nylon et une gamme de couleurs vives, c'est la guitare parfaite pour l'enfant désirant s'essayer à la musique.",
                                 owner: marc
                                 )
