@@ -1,3 +1,15 @@
+.index-action h1 {
+  margin: 0 16%;
+}
+
+.banner-index {
+  margin: 0 auto;
+  height: 200px;
+  width: 100%;
+  margin-bottom: 20px;
+  object-fit: fill;
+}
+
 .card-instrument-inline {
   overflow: hidden;
   width: 500px;
@@ -50,8 +62,4 @@
 
 .map-card-instruments {
   flex-grow: 1;
-}
-
-.index-action h1 {
-  margin: 0 16%;
 }
