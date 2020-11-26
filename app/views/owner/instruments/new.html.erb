@@ -1,9 +1,14 @@
-<% CATEGORY = ["instrument à vent", "instrument à corde", "percussion", "clavier"] %>
-<%= simple_form_for([@owner, @instrument]) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :category, collection: CATEGORY %>
-  <%= f.input :description %>
-  <%= f.input :price_per_day, collection: 0..25%>
-  <%= f.input :photo, as: :file %>
-  <%= f.button :submit, class: "btn btn-ghost" %>
-<% end %>
+<div class="container p-5">
+  <%= simple_form_for([:owner, @instrument]) do |f| %>
+    <label for="">nom :</label>
+    <%= f.input :name, label: false %>
+    <label for="">catégorie :</label>
+    <%= f.input :category, label: false, collection: @category %>
+    <label for="">description :</label>
+    <%= f.input :description, label: false %>
+    <label for=""> prix par jour :</label>
+    <%= f.input :price_per_day,label: false, collection: 0..25%>
+    <%= f.input :photo, as: :file %>
+    <%= f.button :submit, class: "btn btn-primary" %>
+  <% end %>
+</div>

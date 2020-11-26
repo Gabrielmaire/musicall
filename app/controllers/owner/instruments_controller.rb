@@ -1,23 +1,23 @@
 class Owner::InstrumentsController < ApplicationController
   def new
-    @owner = User.find(params[:owner_id])
+    @category = ["instrument à vent", "instrument à corde", "percussion", "clavier"]
+    @owner = current_user
     @instrument = Instrument.new
   end
 
   def create
-    @owner = User.find(params[:user_id])
+    @owner = current_user
     @instrument = Instrument.new(instrument_params)
     @instrument.owner = @owner
     if @instrument.save
-      redirect_to cocktail_path(@cocktail)
+      redirect_to profile_path
     else
       render :new
     end
   end
 
    private
-
-  def cocktail_params
-    params.require(:cocktail).permit(:name, :photo)
+  def instrument_params
+    params.require(:instrument).permit(:name, :photo, :category, :description, :price_per_day)
   end
 end
