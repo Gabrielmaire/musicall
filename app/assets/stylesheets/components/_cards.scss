@@ -40,7 +40,7 @@
 }
 
 .btn btn-primary {
-  text-align: right;
+  
 }
 
 #map {
@@ -53,8 +53,13 @@
 
 .map-container{
   display: flex;
+  margin: 0 15%;
 }
 
 .map-card-instruments {
   flex-grow: 1;
+}
+
+.index-action h1 {
+  margin: 0 16%;
 }
