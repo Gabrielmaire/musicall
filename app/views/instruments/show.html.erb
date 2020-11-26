@@ -1,34 +1,36 @@
 <div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="instrument-show-title ">
-        <label for="category", class="instrument-category-show"> <%= @instrument.category %> </label>
-        <h1 class="text-center"> <%= @instrument.name %> </h1>
-        <h3> <%= @instrument.location %> </h3>
-        <div class="d-flex justify-content-center align-items-center">
-          <p class="mr-3 mb-0"> <%= @instrument.owner.username %> </p>
-          <%= cl_image_tag @instrument.owner.avatar.key, alt: "alttext", width: 50, height: 50, crop: :fill, style: "border-radius: 50%;" %>
-        </div>
+  <div class="row pb-5 pt-5">
+    <%= link_to "Retour", instruments_path, class: "btn btn-secondary rounded" %>
+  </div>
+  <div class="row align-items-center">
+    <div class="col-lg-5 p-0">
+      <div class="d-flex align-items-center">
+        <%= cl_image_tag @instrument.owner.avatar.key, alt: "alttext", width: 50, height: 50, crop: :fill, style: "border-radius: 50%;" %>
+        <p class="mr-3 mb-0"> <%= @instrument.owner.username %> </p>
       </div>
-      <div class="text-center m-5">
-        <%= cl_image_tag @instrument.photo.key, alt: "alttext", width: 550, height: 270, crop: :fill %>
+      <%= cl_image_tag @instrument.photo.key, alt: "alttext", width: 450, height: 250, crop: :fill %>
+    </div>
+    <div class="col-lg-7">
+      <div class="instrument-show-title ">
+        <h4 class="font-weight-light"> <%= @instrument.category %> </h4>
+        <h1 class="text-center"> <%= @instrument.name %> </h1>
+        <h4 class="location-instrument-show"> <%= @instrument.location %> </h4>
+      </div>
+      <div>
+        <%= simple_form_for [@instrument, @rental_request] do |f| %>
+          <label for="">date de début</label>
+          <%= f.input :start_date, label: false %>
+          <label for="">date de fin</label>
+          <%= f.input :end_date, label: false %>
+          <%= f.button :submit, "louer pour #{@instrument.price_per_day}€/jour", class: "btn btn-primary btn-create-rental-request rounded"%>
+        <% end %>
       </div>
     </div>
   </div>
-
   <div class="row">
-    <div class="col-lg-8">
-      <div class="details-instrument">
-        <h3>description</h3>
-        <p> <%= @instrument.description %> </p>
-      </div>
-    </div>
-    <div class="col-lg-4 bg-black">
-      <%= simple_form_for [@instrument, @rental_request] do |f| %>
-        <%= f.input :start_date %>
-        <%= f.input :end_date %>
-        <%= f.button :submit, "louer pour #{@instrument.price_per_day}€/jour", class: "btn btn-primary btn-create-rental-request"%>
-      <% end %>
+    <div class="details-instrument">
+      <h3>description</h3>
+      <p> <%= @instrument.description %> </p>
     </div>
   </div>
 </div>
