@@ -1,8 +1,8 @@
 .profil {
 
-  h1 {
-
-  }
+ .fa-check-circle {
+  color: green,
+ }
 
   .card-product {
     overflow: hidden;
@@ -11,7 +11,8 @@
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin-top: 9px;
+    border-radius: 10px;
   }
 
   .card-product img {
@@ -50,6 +51,43 @@
 
 .btn-flat:hover {
   background: #ff8e71;
+  color: white;
+}
+
+.instrument-container {
+  width: 150px;
+  height: 150px;
+  border: groove;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 6px;
+  border-radius: 7px;
+
+
+  p {
+  color : $white;
+  font-weight: 800;
+  }
+
+  .price {
+    font-weight: 1000;
+  }
+
+}
+
+.btn-request {
+  color: white;
+  padding: 1px;
+  border-radius: 4px;
+  background: #264653;
+  transition: background 0.3s ease;
+}
+
+.btn-request:hover {
   color: white;
 }
 

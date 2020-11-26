@@ -1,48 +1,50 @@
 <div class="container profil">
-  <h1>Profil</h1>
 
-  <p><%= @users.username %></p>
+    <div class="row">
+      <div class="col-10 p-3">
+        <h3> Mes Instruments </h3>
+          <div class="d-flex justify-space-between ">
+            <% @users.instruments.each do |instrument| %>
+            <div class="instrument-container" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path(instrument.photo.key, height: 300, crop: :fill)%>')">
+            <i class="fas fa-trumpet"></i>
+            <div> <p><%= instrument.name %></p></div>
+            <div> <p class="price"><%= instrument.price_per_day%>€</p></div>
 
-
-  <div class="row">
-    <div class="col-md-6 ">
-      <h2> Mes Réservations </h2>
-      <h4> En attente </h4>
-      <% @pending_requests.each do |rental_request| %>
-        <div class="card-product">
-          <%= cl_image_tag rental_request.instrument.photo.key %>
-          <div class="card-product-infos">
-            <h2> <%= rental_request.status %> </h2> Par <%= rental_request.instrument.owner.username %>
-            <%= "du #{rental_request.start_date} au #{rental_request.end_date}"%>
-          </div>
+            </div>
+            <% end %>
         </div>
-      <% end %>
-      <h4> Mes Locations passées </h4>
-      <% @accepted_requests.each do |rental_request| %>
-        <div class="card-product">
-          <%= cl_image_tag rental_request.instrument.photo.key %>
-          <div class="card-product-infos">
-            <h2> <%= rental_request.status %> </h2> Par <%= rental_request.instrument.owner.username %>
-            <%= "du #{rental_request.start_date} au #{rental_request.end_date}"%>
-          </div>
-        </div>
-      <% end %>
+      </div>
     </div>
 
+    <div class="row">
+      <div class="d-flex justify-content-between ">
 
-     <div class="col-md-6 ">
-        <div class="d-flex justify-content-between ">
-          <h2> Mes Instruments </h2>
-          <div class="btn btn-flat">
-          <%= link_to 'Ajoute un instrument', new_owner_instrument_path(@instrument) %>
-          </div>
-        </div>
-        <% @users.instruments.each do |instrument| %>
+      <div class="col-lg-8 p-4">
+        <h3> Mes Locations passées </h3>
+        <% @accepted_requests.each do |rental_request| %>
           <div class="card-product">
-            <%= cl_image_tag instrument.photo.key %>
+            <%= cl_image_tag rental_request.instrument.photo.key %>
             <div class="card-product-infos">
-              <h2><%= instrument.category %></h2>
-              <p><%= instrument.name %></p>
+              <i class="far fa-check-square"></i>
+              <p> Par <%= rental_request.instrument.owner.username %>
+              <%= "du #{rental_request.start_date} au #{rental_request.end_date}"%> </p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+        <div class="col-lg-8 p-4">
+          <h3> Mes demandes recues </h3>
+          <% @pending_requests.each do |rental_request| %>
+          <div class="card-product">
+            <%= cl_image_tag rental_request.instrument.photo.key %>
+            <div class="card-product-infos">
+              <h2> <%= rental_request.instrument.owner.username %> souhaite louer ton instrument </h2>
+              <p> <%= "du #{rental_request.start_date} au #{rental_request.end_date}"%></p>
+                <div class="d-flex justify-content-between ">
+                <p><%= link_to 'Validez', accept_owner_rental_request_path(rental_request), method: :patch, class: "btn btn-request" %></p>
+                <p><%= link_to 'Refusez', decline_owner_rental_request_path(rental_request),method: :patch, class: "btn btn-request" %></p>
+                </div>
             </div>
           </div>
         <% end %>
