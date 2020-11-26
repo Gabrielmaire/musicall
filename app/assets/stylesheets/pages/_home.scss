@@ -2,8 +2,8 @@
 .homepage {
 
 * {
-  box-sizing: border-box;
-}
+   box-sizing: border-box;
+ }
 
 .banner {
   background-size: cover;
@@ -24,7 +24,7 @@
   color: #FFFFFF;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-weight: bold
+  font-weight: bold;
 }
 
 .btn-flat {
@@ -40,7 +40,34 @@
   color: white;
 }
 
+.introduction {
+  padding-top: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
+  text-align: center;
+  color: #0E0000;
+}
+
+.introduction-card {
+  display: flex;
+  justify-content: center;
+  border: solid 2px #e5e5e5;
+  flex-direction: column;
+  padding: 15px 15px;
+  border-radius: 10px;
+}
+
+.plans {
+  padding-top: 30px;
+  //padding-left: 60px;
+  text-align: center;
+  color: #0E0000;
+}
+
 .cards {
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 60px;
   margin-top: 30px;
   margin-bottom: 30px;
   display: flex;
@@ -55,6 +82,7 @@
   border-radius: 10px;
   border: solid 1px #e5e5e5;
   align-self: center;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .card-image {
@@ -63,14 +91,19 @@
   height: 80%;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
 }
 
 .card-infos {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   margin-top: 10px;
+  padding-left: 1em;
 }
+}
+
+.card:hover {
+  background-color: black;
+  //5px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 // // Smallest device
