@@ -42,7 +42,7 @@
 
 .introduction {
   padding-top: 30px;
-  padding-bottom: 30px;
+  //padding-bottom: 30px;
   text-align: center;
   color: #FFFFFF;
 }
@@ -58,12 +58,8 @@
 }
 
 .bons-plan {
-  background-color: #e8e8e8;
+  background-color: #e5e5e5;
 }
-
-// .button-plan {
-
-// }
 
 .plans {
   padding-top: 30px;
@@ -101,7 +97,7 @@
   background-size: cover;
   height: 80%;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -112,10 +108,19 @@
   padding-left: 1em;
   line-height: 7px;
 }
-}
 
 .cards a:hover {
   text-decoration: none;
+}
+
+.call-to-action {
+  display: flex;
+  // justify-content: center;
+  // text-align: center;
+  flex-direction: column;
+  padding: 30px 15px;
+  align-items: center;
+}
 }
 
 @media (min-width: 576px) {
