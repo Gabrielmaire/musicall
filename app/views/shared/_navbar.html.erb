@@ -5,13 +5,24 @@
 
   <div class="search-bar p-2 bd-highlight pl-4">
     <div class="wrap">
-      <div class="search">
+      <%= form_tag instruments_path, method: :get, class: "search" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Trouve ton instrument",
+          class: "searchTerm"
+        %>
+        <%= button_tag(type: "submit", class: "btn btn-primary searchButton") do %>
+          <i class="fa fa-search"></i>
+        <% end %>
+      <% end %>
+
+      <%# <div class="search">
           <input type="text" class="searchTerm" placeholder="Trouve ton instrument">
           <button type="submit" class="searchButton">
-            <i class="fa fa-search"></i>
         </button>
-      </div>
-</div>
+      </div> %>
+    </div>
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
