@@ -5,9 +5,12 @@ class ProfilesController < ApplicationController
     @refused_requests  = current_user.rental_requests.where(status: "refusée")
 
     @my_requests = RentalRequest.joins(:instrument).where(instruments: { owner: current_user })
-    # @my_pending_requests = @my_requests.where(status: "en attente")
 
-    # @my_accepted_requests = current_user.instruments.rental_requests.where(status: "acceptée")
+    @my_pending_requests = @my_requests.where(status: "en attente")
+
+    @my_accepted_requests = @my_requests.where(status: "acceptée")
+    @my_accepted_requests_incomming = @my_accepted_requests.where('start_date > ?', Date.today)
+
     # @my_refused_requests  = current_user.instruments.rental_requests.where(status: "refusée")
 
     # @clavier_instruments = current_user.instrument.where(status: "Clavier")

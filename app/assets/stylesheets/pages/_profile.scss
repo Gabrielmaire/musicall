@@ -1,22 +1,28 @@
 .profil {
 
-  margin: 20px;
 
+  margin-bottom: 40px;
+  padding-left: 40px;
+  h3 {
+    color: #264653;
+  }
 
   .card-product {
     overflow: hidden;
-    height: 120px;
+    height: 100px;
+    width: 450px;
     background: white;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     display: flex;
     align-items: center;
     margin-top: 9px;
+    margin-right: 0;
     border-radius: 10px;
   }
 
   .card-product img {
     height: 100%;
-    width: 150px;
+    width: 100px;
     object-fit: cover;
     text-align: left;
   }
@@ -31,13 +37,18 @@
     font-size: 12px;
     line-height: 1.4;
     opacity: .7;
-    margin-top: 8px;
-    text-align: right;
+    margin-bottom: 3px;
+    text-align: left;
   }
 
   .card-product .card-product-infos {
     padding: 30px;
   }
+
+.btn-success  .btn-danger{
+    height: 10px;
+  }
+
 
   .btn-flat {
   margin-bottom: 5px;
@@ -58,38 +69,35 @@
   width: 150px;
   height: 150px;
   border: thin;
-  text-align: center;
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-right: 9px;
+  margin-right: 8px;
   border-radius: 7px;
 
 
   p {
   color : $white;
   font-weight: 700;
-  margin-top: 30px;
+  margin-top: 20px;
+  text-align: center;
   }
 
   .price {
     font-weight: 1200;
+    text-align: center;
+    margin-bottom: 1px;
   }
 
 }
 
-.btn-request {
-  color: white;
-  padding: 1px;
-  border-radius: 4px;
-  background: #264653;
-  transition: background 0.3s ease;
-}
+
 
 .btn-request:hover {
   color: white;
 }
+
 
 }
