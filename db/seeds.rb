@@ -67,7 +67,7 @@ marc_ukulele = Instrument.new(category: "Instrument à corde",
                                 location:  "10 rue Crébillon, 44000 Nantes",
                                 city: "Nantes",
                                 description: "Ayant appartenu à Paul Mc Cartney, ce Ukulele est un instrument de collection qui ravira tout les amateurs de musique, tant par son histoire que par sa qualité de fabrication",
-                                owner: marc,
+                                owner: steph,
                                 )
 file = File.open(Rails.root.join('db/seeds/images/instruments/ukulele.jpg'))
 marc_ukulele.photo.attach(io: file, filename: 'ukulele.jpg', content_type: 'image/jpg')
@@ -82,7 +82,7 @@ marc_piano = Instrument.new(category: "Clavier",
                                 city: "Orvault",
                                 description: "C'est l'un des plus petits pianos du marché actuel. Un meuble élégant et raffiné, soigné dans les moindres détails.
                                 Les pianos à queue Samick offrent au pianistes débutants ou amateurs, une palette sonore très agréable et un toucher fin et bien équilibré.",
-                                owner: marc,
+                                owner: ophe,
                                 )
 file = File.open(Rails.root.join('db/seeds/images/instruments/marc_queue.jpg'))
 marc_piano.photo.attach(io: file, filename: 'marc_queue.jpg', content_type: 'image/jpg')
@@ -188,7 +188,7 @@ marc_synthetiseur = Instrument.new(category: "Clavier",
                                 location:  "1 rue Saint-Vincent 44000 Nantes",
                                 city: "Nantes",
                                 description: "Conçue pour les jeunes débutants, la guitare classique Junior offre un instrument de grande qualité. Avec un corps de taille junior, des cordes en nylon et une gamme de couleurs vives, c'est la guitare parfaite pour l'enfant désirant s'essayer à la musique.",
-                                owner: marc
+                                owner: gab
                                 )
 file = File.open(Rails.root.join('db/seeds/images/instruments/marc_synthetiseur.jpg'))
 marc_synthetiseur.photo.attach(io: file, filename: 'marc_synthetiseur.jpg', content_type: 'image/jpg')
