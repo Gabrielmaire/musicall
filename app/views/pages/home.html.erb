@@ -12,32 +12,41 @@
       <h3>Tous les instruments à portée de main    <i class="fas fa-guitar"></i></h3>
       <p>Tu as une envie soudaine de jouer du ukulele ce week-end ?</br>
         Tu rêves de rejoindre une fanfare pour l'été mais il te manque une clarinette ?</br>
-        Ou tu veux simplement t'essayer au violon ?
-      Music'All a la solution !</p>
+        Ou tu veux simplement t'essayer au violon ?</br>
+        </br>
+        Music'All a la solution !</p>
     </div>
   </div>
 
   <div class="bons-plan">
+
     <div class="plans">
       <h4></i>Découvre les bons plans de la semaine    <i class="fas fa-music"></i></h4>
     </div>
 
     <div class="cards">
       <% @instruments.each do |instrument| %>
-      <%= link_to instrument_path(instrument), class: "link-on-card-home" do %>
-      <div class="card">
-        <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= rails_blob_path(instrument.photo) %>)">
-        </div>
-        <div class="card-infos">
-          <h5><%= instrument.name %></h5>
-          <p><%= instrument.price_per_day %>€ / jour</p>
-        </div>
-      </div>
-      <% end %>
+        <%= link_to instrument_path(instrument), class: "link-on-card-home" do %>
+          <div class="card">
+            <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= rails_blob_path(instrument.photo) %>)">
+            </div>
+            <div class="card-infos">
+              <h5><%= instrument.name %></h5>
+              <p><%= instrument.price_per_day %>€ / jour</p>
+            </div>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>
+
+  <div class="container">
+    <div class="call-to-action">
+      <h3>Trouve l'instrument dont tu as besoin</h3>
+      <p>Du yukulele au saxophone, Music'All a ce qu'il te faut.</p>
+      <%= link_to 'Découvre les instruments', instruments_path, class: "btn btn-flat" %>
+    </div>
   </div>
 
-<div class="comments">
 </div>
+
