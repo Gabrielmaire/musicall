@@ -9,6 +9,7 @@ class Owner::RentalRequestsController < ApplicationController
   def decline
     @rental_request = RentalRequest.find(params[:id])
     @rental_request.status = "refusée"
+    @rental_request.save!
     redirect_to profile_path
   end
 end

@@ -73,7 +73,7 @@
     </div>
 
     <div class="col-lg-6">
-      <h3 class="pt-5"> Les Locations à venir</h3>
+      <h3 class="pt-5"> Les locations à venir</h3>
       <% @my_accepted_requests_incomming.each do |rental_request| %>
       <div class="card-product">
       <%= cl_image_tag rental_request.instrument.photo.key %>

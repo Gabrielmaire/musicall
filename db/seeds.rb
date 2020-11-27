@@ -54,7 +54,7 @@ marc_guitare = Instrument.new(category: "Instrument à corde",
                                 location:  "2 Rue de la Paix, 44000 Nantes",
                                 city: "Nantes",
                                 description: "Légère, confortable et délivrant pour autant un son riche et puissant, la version 3/4 du célèbre modèle Muse de Luna constitue également une excellente guitare d'étude pour les débutants et les jeunes guitaristes.",
-                                owner: marc,
+                                owner: steph,
                                 )
 file = File.open(Rails.root.join('db/seeds/images/instruments/marc_guitare.jpg'))
 marc_guitare.photo.attach(io: file, filename: 'marc_guitare.jpg', content_type: 'image/jpg')
@@ -188,7 +188,7 @@ marc_synthetiseur = Instrument.new(category: "Clavier",
                                 location:  "1 rue Saint-Vincent 44000 Nantes",
                                 city: "Nantes",
                                 description: "Conçue pour les jeunes débutants, la guitare classique Junior offre un instrument de grande qualité. Avec un corps de taille junior, des cordes en nylon et une gamme de couleurs vives, c'est la guitare parfaite pour l'enfant désirant s'essayer à la musique.",
-                                owner: gab
+                                owner: ophe
                                 )
 file = File.open(Rails.root.join('db/seeds/images/instruments/marc_synthetiseur.jpg'))
 marc_synthetiseur.photo.attach(io: file, filename: 'marc_synthetiseur.jpg', content_type: 'image/jpg')
@@ -253,8 +253,8 @@ rental_requests = RentalRequest.create!(
                                 )
 
 rental_requests = RentalRequest.create!(
-                                start_date: "2020-09-11",
-                                end_date: "2020-09-17",
+                                start_date: "2020-12-11",
+                                end_date: "2020-12-17",
                                 renter: ophe,
                                 instrument: marc_guitare,
                                 status: "acceptée",
