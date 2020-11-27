@@ -21,18 +21,6 @@ class RentalRequestsController < ApplicationController
     @rental_requests = RentalRequest.all
   end
 
-  def validate_status
-    @rental_request = RentalRequest.find(params[:rental_request_id])
-    @rental_request.status = "acceptée"
-    redirect_to profile_path
-  end
-
-  def refused_status
-    @rental_request = RentalRequest.find(params[:rental_request_id])
-    @rental_request.status = "refusée"
-    redirect_to profile_path
-  end
-
   private
 
   def rental_request_params
