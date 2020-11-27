@@ -41,7 +41,7 @@
 }
 
 .introduction {
-  padding-top: 30px;
+  padding-top: 40px;
   //padding-bottom: 30px;
   text-align: center;
   color: #FFFFFF;
@@ -70,9 +70,8 @@
 .cards {
   padding-left: 60px;
   padding-right: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 50px;
   margin-top: 20px;
-  margin-bottom: 10px;
   display: flex;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
@@ -115,8 +114,6 @@
 
 .call-to-action {
   display: flex;
-  // justify-content: center;
-  // text-align: center;
   flex-direction: column;
   padding: 30px 15px;
   align-items: center;

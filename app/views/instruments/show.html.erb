@@ -2,44 +2,54 @@
   <div class="row pb-5 pt-5">
     <%= link_to "Retour", instruments_path, class: "btn btn-secondary rounded" %>
   </div>
+
   <div class="row align-items-center">
-    <div class="col-lg-5 p-0">
-      <div class="d-flex justify-content-between">
-        <div class="d-flex align-items-center mb-1">
-          <%= cl_image_tag @instrument.owner.avatar.key, alt: "alttext", width: 50, height: 50, crop: :fill, style: "border-radius: 50%;" %>
-          <p class="ml-3 mb-0"> <%= @instrument.owner.username %> </p>
+    <!-- <div class="card-instrument-show"> -->
+      <div class="col-lg-6 p-0">
+        <div class="top-infos-show-card d-flex justify-content-between">
+          <div class="d-flex align-items-center mb-1">
+            <%= cl_image_tag @instrument.owner.avatar.key, alt: "alttext", width: 50, height: 50, crop: :fill, style: "border-radius: 50%;" %>
+            <p class="ml-3 mb-0"> <%= @instrument.owner.username %> </p>
+          </div>
+          <div class="price_day_show d-flex align-items-end mb-1">
+            <p id="price-per-day" data-price="<%= @instrument.price_per_day %>"> <strong><%= @instrument.price_per_day%> €</strong>/ jour </p>
+          </div>
         </div>
-        <div class="price_day_show d-flex align-items-end">
-          <p id="price-per-day" data-price="<%= @instrument.price_per_day %>"> <%= @instrument.price_per_day%> € / jour </p>
+        <div class="image-show-instrument">
+         <%= cl_image_tag @instrument.photo.key, alt: "alttext", height: 320, crop: :fill %>
         </div>
       </div>
-      <div class="image-show-instrument">
-       <%= cl_image_tag @instrument.photo.key, alt: "alttext", height: 300, crop: :fill %>
+    <!-- </div> -->
+
+    <div class="col-lg-6">
+      <div class="instrument-show-title">
+        <h3> <%= @instrument.name %> </h3>
+        <p> <em><%= @instrument.category %> </em>
+          <br>
+          <i class="fas fa-map-marker-alt mr-2"></i><%= @instrument.location %> </p>
       </div>
-    </div>
-    <div class="col-lg-7">
-      <div class="instrument-show-title ">
-        <h4 class="font-weight-light"> <u> <%= @instrument.category %> </u> </h4>
-        <h1 class="text-center"> <%= @instrument.name %> </h1>
-        <h4 class="location-instrument-show"> <%= @instrument.location %> </h4>
-      </div>
+
       <div>
         <%= simple_form_for [@instrument, @rental_request] do |f| %>
-          <label for="">date de début</label>
+          <label for="">Date de début</label>
           <%= f.input :start_date, as: :string, required: false, input_html: {id: "start_datepicker"}, label: false %>
-          <label for="">date de fin</label>
+          <label for="">Date de fin</label>
           <%= f.input :end_date, as: :string, required: false, input_html: {id: "end_datepicker"}, label: false %>
-          <p>Soit un total de <span id="total-price"></span><span id="total-price-euro">€</span></p>
-          <%= f.button :submit, "louer", class: "btn btn-primary btn-create-rental-request rounded"%>
+          <p>Prix total : <span id="total-price"></span><span id="total-price-euro">€</span></p>
+
+            <%= f.button :submit, "Envoyer", class: "btn btn-create-rental-request"%>
+
         <% end %>
       </div>
     </div>
   </div>
+
   <div class="row">
-    <div class="details-instrument mt-5">
-      <h3>description</h3>
+    <div class="details-instrument mt-4">
+      <h3>Description</h3>
       <p> <%= @instrument.description %> </p>
     </div>
   </div>
+
 </div>
 
