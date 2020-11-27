@@ -1,3 +1,7 @@
+body {
+  padding-top: 60px;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
@@ -11,3 +15,13 @@
   color: salmon;
   font-size: 2em;
 }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+
+
