@@ -32,16 +32,17 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 });
+import { initFlatpickr } from "../plugins/flatpickr";
 
 import { initMapbox } from '../plugins/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
+  initFlatpickr();
 })
 
 import { totalPrice } from '../components/total_price_calculations';
 totalPrice();
 
-import "../plugins/flatpickr"
 
 import "../plugins/moment"
